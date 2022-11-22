@@ -9,7 +9,7 @@ startFlow:
     params:
       person: keen
       messages:
-      - text: "Now intall armory cli on your shell and make sure you're able to run `armoey login` succefully"
+      - text: "Now intall armory cli on your shell and make sure you're able to run `armory login` succefully"
         delay: 1000
       - text: "Make sure you're choosing ${user.githubrepo} tenant and :instruction[let me know when you're done]"
         delay: 1500
