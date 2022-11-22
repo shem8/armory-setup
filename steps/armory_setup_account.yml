@@ -19,7 +19,7 @@ startFlow:
 trigger:
   type: user_message
   params:
-    person: head-of-rd
+    person: keen
   flowNode:
     if:
       conditions:
@@ -28,7 +28,7 @@ trigger:
         do:
         - actionId: bot_message
           params:
-            person: head-of-rd
+            person: keen
             messages:
             - text: Awesome! 
               delay: 2000
@@ -37,7 +37,7 @@ trigger:
         do:
         - actionId: bot_message
           params:
-            person: head-of-rd
+            person: keen
             messages:
             - text: :instruction[If you need any help, just say **I'm stuck** to let me know].
                 If that’s not the case - take your time and tell me once you're ready
