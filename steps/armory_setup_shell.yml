@@ -1,0 +1,40 @@
+id: armory_setup_shell
+learningObjectives: 
+- Configure shell to use Armory
+hints:
+- Any help here
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: keen
+      messages:
+      - text: "Now intall armory cli on your shell and make sure you're able to run `armoey login` succefully"
+        delay: 1000
+      - text: "Make sure you're choosing ${user.githubrepo} tenant and :instruction[let me know when you're done]"
+        delay: 1500
+trigger:
+  type: user_message
+  params:
+    person: head-of-rd
+  flowNode:
+    if:
+      conditions:
+      - conditionId: is_user_message_text_ready_to_continue
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: head-of-rd
+            messages:
+            - text: cool cool cool 
+              delay: 2000
+            - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: head-of-rd
+            messages:
+            - text: take your time, make sure you accepted the invite and `armory -v` is working too
+              delay: 1000
