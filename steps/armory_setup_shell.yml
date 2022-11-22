@@ -29,7 +29,7 @@ trigger:
             messages:
             - text: cool cool cool 
               delay: 2000
-            - actionId: finish_step
+        - actionId: finish_step
       else:
         do:
         - actionId: bot_message
